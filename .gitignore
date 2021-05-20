@@ -1,0 +1,8 @@
+node_modules/*
+coverage/*
+
+.prettierrc
+.env
+.env.dev
+.local.dev.env
+.local.test.env

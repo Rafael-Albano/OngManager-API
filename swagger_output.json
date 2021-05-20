@@ -1,0 +1,1293 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/ong": {
+      "post": {
+        "tags": [
+          "Ongs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "post ong object",
+            "in": "body",
+            "description": "New ong values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "new ong"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "ong description"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "aaa@aaa.com"
+                },
+                "phone": {
+                  "type": "string",
+                  "example": "(19) 99999-9999"
+                }
+              },
+              "required": [
+                "name",
+                "description",
+                "email",
+                "phone"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Ongs"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ong/{id}": {
+      "get": {
+        "tags": [
+          "Ongs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Ongs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "put ong object",
+            "in": "body",
+            "description": "New ong values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "new ong"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "ong description"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "aaa@aaa.com"
+                },
+                "phone": {
+                  "type": "string",
+                  "example": "(19) 99999-9999"
+                }
+              },
+              "required": [
+                "name",
+                "description",
+                "email",
+                "phone"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Ongs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "patch ong object",
+            "in": "body",
+            "description": "New ong values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "new ong"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "ong description"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "aaa@aaa.com"
+                },
+                "phone": {
+                  "type": "string",
+                  "example": "(19) 99999-9999"
+                }
+              },
+              "required": [
+                "name",
+                "description",
+                "email",
+                "phone"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Ongs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/family": {
+      "post": {
+        "tags": [
+          "Families"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "post family object",
+            "in": "body",
+            "description": "New family values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "new family"
+                },
+                "birth_date": {
+                  "type": "string",
+                  "example": "2021-04-10"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "aaa@aaa.com"
+                },
+                "phone": {
+                  "type": "string",
+                  "example": "(19) 99999-9999"
+                },
+                "cpf": {
+                  "type": "string",
+                  "example": "469.610.370-62"
+                },
+                "address": {
+                  "type": "string",
+                  "example": "123 Main"
+                },
+                "civil_status": {
+                  "type": "string",
+                  "example": "casado"
+                },
+                "gender": {
+                  "type": "string",
+                  "example": "masculino"
+                },
+                "number_members": {
+                  "type": "number",
+                  "example": 20
+                },
+                "children": {
+                  "type": "number",
+                  "example": 4
+                },
+                "per_capita_income": {
+                  "type": "string",
+                  "example": "1200"
+                }
+              },
+              "required": [
+                "name",
+                "birth_date",
+                "email",
+                "phone",
+                "cpf",
+                "address",
+                "civil_status",
+                "gender",
+                "number_members",
+                "children",
+                "per_capita_income"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Families"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/family/{id}": {
+      "get": {
+        "tags": [
+          "Families"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      },
+      "put": {
+        "tags": [
+          "Families"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "put family object",
+            "in": "body",
+            "description": "New family values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "new family"
+                },
+                "birth_date": {
+                  "type": "string",
+                  "example": "2021-04-10"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "aaa@aaa.com"
+                },
+                "phone": {
+                  "type": "string",
+                  "example": "(19) 99999-9999"
+                },
+                "address": {
+                  "type": "string",
+                  "example": "123 Main"
+                },
+                "civil_status": {
+                  "type": "string",
+                  "example": "casado"
+                },
+                "number_members": {
+                  "type": "number",
+                  "example": 20
+                },
+                "children": {
+                  "type": "number",
+                  "example": 4
+                },
+                "per_capita_income": {
+                  "type": "string",
+                  "example": "1200"
+                }
+              },
+              "required": [
+                "name",
+                "birth_date",
+                "email",
+                "phone",
+                "address",
+                "civil_status",
+                "number_members",
+                "children",
+                "per_capita_income"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Families"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "patch family object",
+            "in": "body",
+            "description": "New family values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "new family"
+                },
+                "birth_date": {
+                  "type": "string",
+                  "example": "2021-04-10"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "aaa@aaa.com"
+                },
+                "phone": {
+                  "type": "string",
+                  "example": "(19) 99999-9999"
+                },
+                "address": {
+                  "type": "string",
+                  "example": "123 Main"
+                },
+                "civil_status": {
+                  "type": "string",
+                  "example": "casado"
+                },
+                "number_members": {
+                  "type": "number",
+                  "example": 20
+                },
+                "children": {
+                  "type": "number",
+                  "example": 4
+                },
+                "per_capita_income": {
+                  "type": "string",
+                  "example": "1200"
+                }
+              },
+              "required": [
+                "name",
+                "birth_date",
+                "email",
+                "phone",
+                "address",
+                "civil_status",
+                "number_members",
+                "children",
+                "per_capita_income"
+              ]
+            }
+          }
+        ],
+        "responses": {}
+      },
+      "delete": {
+        "tags": [
+          "Families"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/drug": {
+      "post": {
+        "tags": [
+          "Drugs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "post drug object",
+            "in": "body",
+            "description": "New drug values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "new drug"
+                },
+                "quantity": {
+                  "type": "string",
+                  "example": "999.999"
+                },
+                "category": {
+                  "type": "string",
+                  "example": "drug category"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "drug description"
+                }
+              },
+              "required": [
+                "name",
+                "quantity",
+                "category",
+                "description"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Drugs"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/drug/{id}": {
+      "get": {
+        "tags": [
+          "Drugs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      },
+      "put": {
+        "tags": [
+          "Drugs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "put drug object",
+            "in": "body",
+            "description": "New drug values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "new drug"
+                },
+                "quantity": {
+                  "type": "string",
+                  "example": "999.999"
+                },
+                "category": {
+                  "type": "string",
+                  "example": "drug category"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "drug description"
+                }
+              },
+              "required": [
+                "name",
+                "quantity",
+                "category",
+                "description"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Drugs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "patch drug object",
+            "in": "body",
+            "description": "New drug values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "new drug"
+                },
+                "quantity": {
+                  "type": "string",
+                  "example": "999.999"
+                },
+                "category": {
+                  "type": "string",
+                  "example": "drug category"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "drug description"
+                }
+              },
+              "required": [
+                "name",
+                "quantity",
+                "category",
+                "description"
+              ]
+            }
+          }
+        ],
+        "responses": {}
+      },
+      "delete": {
+        "tags": [
+          "Drugs"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/supply": {
+      "post": {
+        "tags": [
+          "Supplies"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "post supply object",
+            "in": "body",
+            "description": "New supply values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "new supply"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "supply description"
+                },
+                "category": {
+                  "type": "string",
+                  "example": "supply category"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "supply type"
+                },
+                "price": {
+                  "type": "number",
+                  "example": 999.999
+                },
+                "quantity": {
+                  "type": "number",
+                  "example": 99.999
+                }
+              },
+              "required": [
+                "name",
+                "description",
+                "category",
+                "type",
+                "price",
+                "quantity"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Supplies"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/supply/{id}": {
+      "get": {
+        "tags": [
+          "Supplies"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Supplies"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "put supply object",
+            "in": "body",
+            "description": "New supply values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "new supply"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "supply description"
+                },
+                "category": {
+                  "type": "string",
+                  "example": "supply category"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "supply type"
+                },
+                "price": {
+                  "type": "number",
+                  "example": 999.999
+                },
+                "quantity": {
+                  "type": "number",
+                  "example": 99.999
+                }
+              },
+              "required": [
+                "name",
+                "description",
+                "category",
+                "type",
+                "price",
+                "quantity"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Supplies"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "patch supply object",
+            "in": "body",
+            "description": "New supply values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "new supply"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "supply description"
+                },
+                "category": {
+                  "type": "string",
+                  "example": "supply category"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "supply type"
+                },
+                "price": {
+                  "type": "number",
+                  "example": 999.999
+                },
+                "quantity": {
+                  "type": "number",
+                  "example": 99.999
+                }
+              },
+              "required": [
+                "name",
+                "description",
+                "category",
+                "type",
+                "price",
+                "quantity"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Supplies"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/supply/name/{name}": {
+      "get": {
+        "tags": [
+          "Supplies"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/expense": {
+      "post": {
+        "tags": [
+          "Expenses"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "post expense object",
+            "in": "body",
+            "description": "New expense values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "description": {
+                  "type": "string",
+                  "example": "Purchase of 50kg of White Rice"
+                },
+                "value": {
+                  "type": "number",
+                  "example": 225
+                },
+                "category": {
+                  "type": "string",
+                  "example": "purchase of aliments"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "purchase"
+                },
+                "date": {
+                  "type": "string",
+                  "example": "2021-04-23"
+                },
+                "status": {
+                  "type": "string",
+                  "example": "released"
+                }
+              },
+              "required": [
+                "description",
+                "value",
+                "category",
+                "type",
+                "date",
+                "status"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Expenses"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/expense/{id}": {
+      "get": {
+        "tags": [
+          "Expenses"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "expense ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Expenses"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "expense ID"
+          },
+          {
+            "name": "put expense object",
+            "in": "body",
+            "description": "New expense values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "description": {
+                  "type": "string",
+                  "example": "Purchase of 50kg of White Rice"
+                },
+                "value": {
+                  "type": "number",
+                  "example": 230
+                },
+                "category": {
+                  "type": "string",
+                  "example": "purchase of aliments"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "purchase"
+                },
+                "date": {
+                  "type": "string",
+                  "example": "2021-04-24"
+                },
+                "status": {
+                  "type": "string",
+                  "example": "approved"
+                }
+              },
+              "required": [
+                "description",
+                "value",
+                "category",
+                "type",
+                "date",
+                "status"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Expenses"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "expense ID"
+          },
+          {
+            "name": "patch expense object",
+            "in": "body",
+            "description": "New expense values",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "description": {
+                  "type": "string",
+                  "example": "Purchase of 500kg of White Rice"
+                },
+                "value": {
+                  "type": "number",
+                  "example": 2300
+                },
+                "category": {
+                  "type": "string",
+                  "example": "purchase of aliments"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "purchase"
+                },
+                "date": {
+                  "type": "string",
+                  "example": "2021-04-25"
+                },
+                "status": {
+                  "type": "string",
+                  "example": "rejected"
+                }
+              },
+              "required": [
+                "description",
+                "value",
+                "category",
+                "type",
+                "date",
+                "status"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Expenses"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "expense ID"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/expense/category/{category}": {
+      "get": {
+        "tags": [
+          "Expenses"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "category",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "expense Category"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/expense/type/{type}": {
+      "get": {
+        "tags": [
+          "Expenses"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "expense Type",
+            "enum": [
+              "purchase",
+              "bill",
+              "salary",
+              "transport",
+              "maintenance"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {}
+}
